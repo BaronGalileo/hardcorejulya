@@ -1,0 +1,9 @@
+@use 'color' as col;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: col.$background__color_2;
+}

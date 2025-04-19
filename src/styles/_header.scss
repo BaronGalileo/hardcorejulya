@@ -1,0 +1,16 @@
+@use 'color' as col;
+
+.header-wrapper {
+    background-color: rgba(col.$background__color_3, 0.3); // если переменная — цвет в hex, нужно конвертировать
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    display: flex;
+    justify-content:center;
+    
+
+    h1 {
+        color: col.$font__color_3;
+    }
+
+}
