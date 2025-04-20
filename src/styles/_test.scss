@@ -9,9 +9,14 @@
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+}
 
-
-
+.test-main {
+  display: flex;
+  width: 100%;
+  height: auto;
+  // flex-direction: column;
+  background-color: col.$background__color_2;
 }
 
 .main {
@@ -27,60 +32,6 @@
     background-color: aquamarine;
 }
 
-// .projects-section {
-//     opacity: 0;
-//     transform: translateX(100%);
-//     transition: all 0.7s ease-out;
-//     display: flex;
-//     gap: 2rem;
-    
-//     &.in-view {
-//       opacity: 1;
-//       transform: translateX(0);
-//     }
-    
-//     .header {
-//       color: #fff;
-//       font-weight: 900;
-//       font-size: 30px;
-//       margin-bottom: 2rem;
-  
-//       @media (min-width: 640px) {
-//         font-size: 40px;
-//       }
-//       @media (min-width: 768px) {
-//         font-size: 50px;
-//       }
-//       @media (min-width: 1024px) {
-//         font-size: 60px;
-//       }
-//     }
-    
-//     .projects {
-//       display: flex;
-//       flex-direction: column;
-//       gap: 1.5rem;
-  
-//       .project-card {
-//         height: 160px;
-//         border-radius: 8px;
-//         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  
-//         &.red {
-//           background-color: #f87171;
-//         }
-//         &.green {
-//           background-color: #34d399;
-//         }
-//         &.blue {
-//           background-color: #60a5fa;
-//         }
-//         &.yellow {
-//           background-color: #facc15;
-//         }
-//       }
-//     }
-//   }
 
 .projects-section {
     padding: 2rem;
@@ -109,25 +60,39 @@
   
       .project-card {
         height: 160px;
+        width: 400px;
         border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        opacity: 0;
+        opacity: 0.8;
+        transform: scale(0.8);
         transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+
+        // @media (min-width: 640px) {
+        //   width: 200px;
+        // }
+        // @media (min-width: 768px) {
+        //   width: 450px;
+        // }
+        // @media (min-width: 1024px) {
+        //   width: 600px;
+        // }
+    
   
         &.left {
           transform: translateX(-100%);
         }
   
         &.right {
-          transform: translateX(100%);
+          transform: translateX(50%);
         }
-  
         &.in-view-left,
         &.in-view-right {
+          transform: scale(1);
           transform: translateX(0);
           opacity: 1;
         }
-  
+
+    
         &.red {
           background-color: #f87171;
         }
