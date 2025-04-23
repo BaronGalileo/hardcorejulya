@@ -15,6 +15,12 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+
+      // .logo-canvas {
+      //   width: 80px;
+      //   height: 80px;
+      // }
+
   
       h1 {
         color: col.$font__color_3;
@@ -23,7 +29,9 @@
   
       .header-right {
         display: flex;
+        position: relative;
         gap: 20px;
+        z-index: 1;
 
         a {
             color: col.$font__color_3;

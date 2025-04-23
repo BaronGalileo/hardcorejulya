@@ -1,0 +1,31 @@
+@use 'color' as col;
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    flex: 1;
+    gap: 6px;
+    align-items: center;
+
+    span {
+          color: col.$font__red;
+        }
+  
+        input {
+          width: 70%;
+          height: 43px;
+          border-radius: 12px;
+          padding: 10px;
+        }
+  
+        label {
+          color: col.$font__color_3;
+          display: flex;
+          align-items: center; 
+  
+          img {
+            width: 30px;
+            margin-right: 10px; 
+          }
+        }
+}

@@ -18,11 +18,11 @@ export const Header = () => {
     <>
       <div className="header-wrapper">
         <div className="header">
-          <h1>Header</h1>
+          <div className="logo-canvas"></div>
           <div className="header-right">
             <a href="#">Обо мне</a>
-            <a href="#">Занятия</a>
-            <a href="#">Контакты</a>
+            <a href="#section-sport">Занятия</a>
+            <a href="#section-contact">Контакты</a>
           </div>
           <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
             ☰
