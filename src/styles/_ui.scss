@@ -29,3 +29,16 @@
           }
         }
 }
+
+@media (max-width: 740px) {
+  .input-wrapper {
+    input {
+      width: 90%;
+    }
+  }
+}
+@media (max-width: 540px) {
+  .input-wrapper {
+    width: 90%;
+  }
+}

@@ -10,8 +10,12 @@
     
     section {
         height: 100vh;
-        background: url('../../public/images/fon.png') no-repeat center center;
+        background-color: transparent;
         background-size: cover;
+
+        &.item-two {
+            height: auto;
+        }
     }
 
 

@@ -33,8 +33,8 @@ export const Header = () => {
       {menuOpen && (
         <div className="mobile-menu">
             <a href="#" onClick={handleLinkClick}>Обо мне</a>
-            <a href="#" onClick={handleLinkClick}>Занятия</a>
-            <a href="#" onClick={handleLinkClick}>Контакты</a>
+            <a href="#section-sport" onClick={handleLinkClick}>Занятия</a>
+            <a href="#section-contact" onClick={handleLinkClick}>Контакты</a>
         </div>
       )}
     </>

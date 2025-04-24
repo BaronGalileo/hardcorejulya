@@ -1,0 +1,27 @@
+@use 'color' as col;
+
+.footer-wrapper {
+    position: relative;
+    bottom: 80px;
+    left: 0;
+    background-color: rgba(col.$background__color_3, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    
+    p,h1,h2,h3 {
+        color: col.$font__color_3;
+    }
+}
+
+
+@media (max-width: 740px) {
+    .footer-wrapper {
+        height: 54px;
+        bottom: 54px;   
+    }
+}

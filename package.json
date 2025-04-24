@@ -21,7 +21,9 @@
     "react-scripts": "5.0.1",
     "sass": "^1.86.3",
     "sass-loader": "^16.0.5",
+    "three": "^0.176.0",
     "typescript": "^4.9.5",
+    "vanta": "^0.5.24",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -47,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/three": "^0.176.0"
   }
 }
