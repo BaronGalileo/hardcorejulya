@@ -3,6 +3,19 @@
     justify-content: space-around;
     align-items: center;
     gap: 10px;
+
+    &.left {
+      flex-direction: row;
+    }
+  
+    &.right {
+      flex-direction: row-reverse;
+    }
+    @media (max-width: 640px) {
+      &.left, &.right {
+        flex-direction: column;
+      }
+    }
     
     img {
       height: auto;
@@ -20,7 +33,7 @@
       height: 98%;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       border-radius: 15px;
-      transition: transform var(--transition-duration, 1.2s) ease, opacity var(--transition-duration, 1.2s) ease;
+      transition: transform var(--transition-duration, 1.5s) ease, opacity var(--transition-duration, 1.5s) ease;
   
       &.right {
         transform: scale(0.3) translateX(70%);
@@ -40,18 +53,17 @@
 
 
     @media (max-width: 640px) {
-      flex-direction: column;
   
       .card-item {
         max-width: 90%;
         min-width: 250px;
 
-        &.right {
+        &.text {
             transform: scale(0.3) translateY(80%);
             opacity: 0;
         }
     
-        &.left {
+        &.foto {
             transform: scale(0.3) translateY(-80%);
             opacity: 0;
         }

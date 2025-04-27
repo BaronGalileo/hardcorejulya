@@ -1,4 +1,5 @@
 import { FormProvider, useForm } from "react-hook-form";
+import { CowAnimation } from "./Animations/CowAnimation";
 import { LogoAnimation } from "./Animations/LogoAnimation";
 import { CardWithFoto } from "./CardWithFoto/CardWithFoto";
 import { ContactForm } from "./ContactForm/ContactForm";
@@ -6,6 +7,7 @@ import { Footer } from "./Footer/Footer";
 import { Header } from "./Header/Header";
 import { SliderWithBackground } from "./SliderWithBackround/SliderWithBackground";
 import { VantaBackground } from "./VantaBackground/VantaBackground";
+import { LineAnimation } from "./test/TestView";
 
 const slides = [
   {
@@ -52,6 +54,7 @@ export const App = () => {
             url="images/coy.jpg"
             label={"Название проекта"}
             context="Привет, здесь написано про занятия фитнесом. Записать занятия можно, выбрав день недели и время."
+            imagePosition="right"
           />
           <CardWithFoto
             url="images/cat.jpg"
@@ -60,6 +63,10 @@ export const App = () => {
           />
         </section>
         <section className="item-three" id="section-contact">
+          <div className="animation-line"></div>
+          <div className="animation-cow"></div>
+          <LineAnimation/>
+          <CowAnimation/>
           <ContactForm />
           <Footer/>
         </section>

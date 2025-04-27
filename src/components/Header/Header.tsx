@@ -19,6 +19,7 @@ export const Header = () => {
       <div className="header-wrapper">
         <div className="header">
           <div className="logo-canvas"></div>
+          <div className="line-canvas"></div>
           <div className="header-right">
             <a href="#">Обо мне</a>
             <a href="#section-sport">Занятия</a>

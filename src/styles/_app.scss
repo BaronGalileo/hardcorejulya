@@ -16,6 +16,13 @@
         &.item-two {
             height: auto;
         }
+
+        &.item-three {
+            .animation-cow,
+            .animation-line {
+                position: relative;
+            }
+        }
     }
 
 
