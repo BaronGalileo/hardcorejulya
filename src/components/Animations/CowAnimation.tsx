@@ -1,11 +1,11 @@
 import { Howl } from "howler";
 import {
-    AnimatedSprite,
-    Application,
-    Assets,
-    Graphics,
-    Sprite,
-    Spritesheet,
+  AnimatedSprite,
+  Application,
+  Assets,
+  Graphics,
+  Sprite,
+  Spritesheet,
 } from "pixi.js";
 import { useEffect } from "react";
 
@@ -16,9 +16,9 @@ export const CowAnimation = () => {
     let mask: Graphics;
 
     const sound = new Howl({
-      src: ['/assets/music/cow-chmyac.mp3'],
-      volume: 0.5
-    })
+      src: ["/assets/music/cow-chmyac.mp3"],
+      volume: 0.5,
+    });
 
     const initApp = async () => {
       const isMobile = window.innerWidth <= 740;
@@ -52,45 +52,45 @@ export const CowAnimation = () => {
       sprite = new Sprite(firstTexture);
       app.stage.addChild(sprite);
 
+      mask = new Graphics().roundRect(
+        100,
+        100,
+        200,
+        200,
+        // firstTexture.width * 0.1,
+        // firstTexture.height * 0.1,
+        25
+      ).fill(0xffffff)
 
-      mask = new Graphics()
-        .fill(0xffffff)
-        .roundRect(
-          0,
-          0,
-          firstTexture.width * 0.1,
-          firstTexture.height * 0.1,
-          25
-        );
+      // app.stage.addChild(mask);
 
-      app.stage.addChild(mask);
       updateLayout();
       const loadAllFrames = async () => {
-        const jsonUrl = "/assets/cow.json";
+        const jsonUrl = "/assets/cowEat.json";
         const jsonAtlas = await (await fetch(jsonUrl)).json();
 
         const textureAtlas = await Assets.load(jsonAtlas.meta.image);
         const spritesheet = new Spritesheet(textureAtlas, jsonAtlas);
         await spritesheet.parse();
 
-        const animatedSpriteLogo = new AnimatedSprite(
+        const animatedSpriteCow = new AnimatedSprite(
           spritesheet.animations.eat
         );
-        animatedSpriteLogo.animationSpeed = 0.3;
-        animatedSpriteLogo.play();
+        animatedSpriteCow.animationSpeed = 0.2;
+        animatedSpriteCow.play();
 
-        app.stage.addChild(animatedSpriteLogo);
-        sprite = animatedSpriteLogo;
+        app.stage.addChild(animatedSpriteCow);
+        animatedSpriteCow.mask = mask;
+        sprite = animatedSpriteCow;
         sprite.eventMode = "static";
-        sprite.on('pointerover', () => {
+        sprite.on("pointerover", () => {
           sound.play();
-
         });
-        
+
         updateLayout();
       };
 
-      loadAllFrames()
+      loadAllFrames();
       window.addEventListener("resize", updateLayout);
     };
 
@@ -113,7 +113,8 @@ export const CowAnimation = () => {
           ? 0.5
           : 0.5;
 
-      sprite.scale.set(scale);
+      // sprite.scale.set(scale);
+      sprite.scale.set(0.7, 0.7);
       sprite.x = isMobile
         ? (app.renderer.width - sprite.width) / 5
         : (app.renderer.width - sprite.width) / 2;

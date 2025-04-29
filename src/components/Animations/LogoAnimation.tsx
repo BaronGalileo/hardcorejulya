@@ -2,9 +2,8 @@ import {
   AnimatedSprite,
   Application,
   Assets,
-  Graphics,
   Sprite,
-  Spritesheet,
+  Spritesheet
 } from "pixi.js";
 import { useEffect } from "react";
 
@@ -12,7 +11,6 @@ export const LogoAnimation = () => {
   useEffect(() => {
     let app: Application;
     let sprite: Sprite | AnimatedSprite;
-    let mask: Graphics;
 
     const initApp = async () => {
       const isMobile = window.innerWidth <= 740;
@@ -46,18 +44,6 @@ export const LogoAnimation = () => {
       sprite = new Sprite(firstTexture);
       app.stage.addChild(sprite);
 
-      // Маска
-      mask = new Graphics()
-        .fill(0xffffff)
-        .roundRect(
-          0,
-          0,
-          firstTexture.width * 0.1,
-          firstTexture.height * 0.1,
-          25
-        );
-
-      app.stage.addChild(mask);
       updateLayout();
       const loadAllFrames = async () => {
         const jsonUrl = "/assets/spriteLogo.json";
@@ -74,17 +60,17 @@ export const LogoAnimation = () => {
         animatedSpriteLogo.play();
 
         app.stage.addChild(animatedSpriteLogo);
-        sprite.visible = false; // вместо removeChild
+        sprite.visible = false; 
         sprite = animatedSpriteLogo;
         updateLayout();
       };
 
-      loadAllFrames()
+      loadAllFrames();
       window.addEventListener("resize", updateLayout);
     };
 
     const updateLayout = () => {
-      if (!app || !sprite || !mask) return;
+      if (!app || !sprite ) return;
 
       const isMobile = window.innerWidth <= 740;
       const width = isMobile ? 52 : 78;
@@ -110,8 +96,6 @@ export const LogoAnimation = () => {
         ? (app.renderer.height - sprite.height) / 5
         : (app.renderer.height - sprite.height) / 2;
 
-      mask.x = sprite.x - sprite.width / 2;
-      mask.y = sprite.y - sprite.height / 2;
     };
 
     initApp();

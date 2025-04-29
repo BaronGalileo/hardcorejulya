@@ -42,3 +42,14 @@
     width: 90%;
   }
 }
+@media (max-width: 420px) {
+  .input-wrapper{
+    gap: 1px;
+    input {
+      height: 31px;
+    }
+    img {
+      width: 22px;
+    }
+  }
+}

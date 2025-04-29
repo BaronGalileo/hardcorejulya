@@ -1,0 +1,717 @@
+{
+  "frames": {
+    "cow-01.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-02.png": {
+      "frame": {
+        "x": 600,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-03.png": {
+      "frame": {
+        "x": 1200,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-04.png": {
+      "frame": {
+        "x": 1800,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-05.png": {
+      "frame": {
+        "x": 0,
+        "y": 400,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-06.png": {
+      "frame": {
+        "x": 600,
+        "y": 400,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-07.png": {
+      "frame": {
+        "x": 1200,
+        "y": 400,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-08.png": {
+      "frame": {
+        "x": 1800,
+        "y": 400,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-09.png": {
+      "frame": {
+        "x": 0,
+        "y": 800,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-10.png": {
+      "frame": {
+        "x": 600,
+        "y": 800,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-11.png": {
+      "frame": {
+        "x": 1200,
+        "y": 800,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-12.png": {
+      "frame": {
+        "x": 1800,
+        "y": 800,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-13.png": {
+      "frame": {
+        "x": 0,
+        "y": 1200,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-14.png": {
+      "frame": {
+        "x": 0,
+        "y": 1600,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-15.png": {
+      "frame": {
+        "x": 0,
+        "y": 2000,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-16.png": {
+      "frame": {
+        "x": 0,
+        "y": 2400,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-17.png": {
+      "frame": {
+        "x": 600,
+        "y": 1200,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-18.png": {
+      "frame": {
+        "x": 1200,
+        "y": 1200,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-19.png": {
+      "frame": {
+        "x": 1800,
+        "y": 1200,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-20.png": {
+      "frame": {
+        "x": 600,
+        "y": 1600,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-21.png": {
+      "frame": {
+        "x": 1200,
+        "y": 1600,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-22.png": {
+      "frame": {
+        "x": 1800,
+        "y": 1600,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-23.png": {
+      "frame": {
+        "x": 600,
+        "y": 2000,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-24.png": {
+      "frame": {
+        "x": 600,
+        "y": 2400,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-25.png": {
+      "frame": {
+        "x": 1200,
+        "y": 2000,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-26.png": {
+      "frame": {
+        "x": 1800,
+        "y": 2000,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-27.png": {
+      "frame": {
+        "x": 1200,
+        "y": 2400,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cow-28.png": {
+      "frame": {
+        "x": 1800,
+        "y": 2400,
+        "w": 600,
+        "h": 400
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 600,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "image": "assets/cowEat.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2400,
+      "h": 2800
+    },
+    "scale": 1
+  },
+  "animations": {
+  "eat": [
+    "cow-01.png",
+    "cow-02.png",
+    "cow-03.png",
+    "cow-04.png",
+    "cow-05.png",
+    "cow-06.png",
+    "cow-07.png",
+    "cow-08.png",
+    "cow-09.png",
+    "cow-10.png",
+    "cow-11.png",
+    "cow-12.png",
+    "cow-13.png",
+    "cow-14.png",
+    "cow-15.png",
+    "cow-16.png",
+    "cow-17.png",
+    "cow-18.png",
+    "cow-19.png",
+    "cow-20.png",
+    "cow-21.png",
+    "cow-22.png",
+    "cow-23.png",
+    "cow-24.png",
+    "cow-25.png",
+    "cow-26.png",
+    "cow-27.png",
+    "cow-28.png"
+  ]
+}
+}

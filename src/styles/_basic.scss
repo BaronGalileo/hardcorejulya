@@ -1,5 +1,6 @@
 @use 'color' as col;
 
+
 * {
     box-sizing: border-box;
 }
@@ -15,6 +16,7 @@
 
 body {
     background-color: transparent;
+    font-family: 'Manege';
     margin: 0;
     padding: 0;
     overflow-x: hidden;

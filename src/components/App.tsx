@@ -1,5 +1,5 @@
 import { FormProvider, useForm } from "react-hook-form";
-import { CowAnimation } from "./Animations/CowAnimation";
+import { CanvasLineAndCow } from "./Animations/CanvasLineAndCow";
 import { LogoAnimation } from "./Animations/LogoAnimation";
 import { CardWithFoto } from "./CardWithFoto/CardWithFoto";
 import { ContactForm } from "./ContactForm/ContactForm";
@@ -7,7 +7,6 @@ import { Footer } from "./Footer/Footer";
 import { Header } from "./Header/Header";
 import { SliderWithBackground } from "./SliderWithBackround/SliderWithBackground";
 import { VantaBackground } from "./VantaBackground/VantaBackground";
-import { LineAnimation } from "./test/TestView";
 
 const slides = [
   {
@@ -31,16 +30,15 @@ const slides = [
 ];
 
 export const App = () => {
-  
   const methods = useForm({
-    mode: "onTouched"
+    mode: "onTouched",
   });
 
   return (
     <div className="App">
       <FormProvider {...methods}>
         <Header />
-        <LogoAnimation/>
+        <LogoAnimation />
         <section className="item-one">
           <SliderWithBackground slides={slides} interval={2000} />
         </section>
@@ -62,14 +60,17 @@ export const App = () => {
             context="Привет, здесь написано про занятия фитнесом. Записать занятия можно, выбрав день недели и время."
           />
         </section>
+
         <section className="item-three" id="section-contact">
-          <div className="animation-line"></div>
-          <div className="animation-cow"></div>
-          <LineAnimation/>
-          <CowAnimation/>
+          <CanvasLineAndCow />
+          <ContactForm />
+          <Footer />
+        </section>
+        {/* <section className="item-three" id="section-contact">
+          <CanvasLineAndCow/>
           <ContactForm />
           <Footer/>
-        </section>
+        </section> */}
         <VantaBackground />
       </FormProvider>
     </div>

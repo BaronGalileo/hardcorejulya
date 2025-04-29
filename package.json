@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@pixi/mesh": "^7.4.3",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -12,6 +13,7 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "framer-motion": "^12.7.4",
+    "gsap": "^3.12.7",
     "howler": "^2.2.4",
     "pixi.js": "^8.9.1",
     "react": "^19.1.0",
