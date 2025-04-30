@@ -2,35 +2,42 @@ import {
   AnimatedSprite,
   Application,
   Assets,
-  Sprite,
-  Spritesheet
+  Container,
+  Spritesheet,
+  Text,
+  TextStyle
 } from "pixi.js";
 import { useEffect } from "react";
 
 export const LogoAnimation = () => {
+
+  let app: Application;
+  let sprite: AnimatedSprite;
+  let text: Text;
+  let textContainer: Container;
+  let tickerFn: () => void;
+
+
   useEffect(() => {
-    let app: Application;
-    let sprite: Sprite | AnimatedSprite;
+
 
     const initApp = async () => {
       const isMobile = window.innerWidth <= 740;
 
       app = new Application();
       await app.init({
-        width: isMobile ? 52 : 78,
-        height: isMobile ? 52 : 78,
+        width: isMobile ? 150 : 280,
+        height: isMobile ? 54 : 80,
         backgroundAlpha: 0,
+        resolution: window.devicePixelRatio || 1,
+        autoDensity: true,
       });
-
-      if (isMobile) {
-        app.stage.scale.set(0.8);
-      }
 
       app.canvas.style.position = "absolute";
       app.canvas.style.top = "2px";
       app.canvas.style.left = "5%";
       app.canvas.style.borderRadius = "12px";
-      app.canvas.style.boxShadow = "1px  4px 14px #9b8aec";
+
 
       const container = document.querySelector(".logo-canvas");
       if (container) {
@@ -39,72 +46,61 @@ export const LogoAnimation = () => {
         console.error("Элемент с классом .logo-canvas не найден");
       }
 
-      // ЗАГРУЗКА ПЕРВОГО КАДРА
-      const firstTexture = await Assets.load("/icons/icon1.png");
-      sprite = new Sprite(firstTexture);
-      app.stage.addChild(sprite);
+      //Logotip
+      const jsonUrl = "/assets/spriteLogo.json";
+      const jsonAtlas = await (await fetch(jsonUrl)).json();
 
-      updateLayout();
-      const loadAllFrames = async () => {
-        const jsonUrl = "/assets/spriteLogo.json";
-        const jsonAtlas = await (await fetch(jsonUrl)).json();
+      const textureAtlas = await Assets.load(jsonAtlas.meta.image);
+      const spritesheet = new Spritesheet(textureAtlas, jsonAtlas);
+      await spritesheet.parse();
 
-        const textureAtlas = await Assets.load(jsonAtlas.meta.image);
-        const spritesheet = new Spritesheet(textureAtlas, jsonAtlas);
-        await spritesheet.parse();
+      const animatedSpriteLogo = new AnimatedSprite(
+        spritesheet.animations.icon
+      );
+      animatedSpriteLogo.animationSpeed = 0.6;
+      animatedSpriteLogo.play();
+      animatedSpriteLogo.setSize(isMobile? 52 : 78, isMobile? 52 : 78);
+      app.stage.addChild(animatedSpriteLogo);
 
-        const animatedSpriteLogo = new AnimatedSprite(
-          spritesheet.animations.icon
-        );
-        animatedSpriteLogo.animationSpeed = 0.6;
-        animatedSpriteLogo.play();
+      //ТЕКСТ JULYA 
+      const style = new TextStyle({
+        fontFamily: "Brush Script MT, cursive",
+        fontSize: isMobile ? 28 : 36,
+        fill: "#FF69B4",
+        align: "center",
+        dropShadow: {
+          color: "#000000",
+          blur: 4,
+          distance: 2,
+        },
+      });
 
-        app.stage.addChild(animatedSpriteLogo);
-        sprite.visible = false; 
-        sprite = animatedSpriteLogo;
-        updateLayout();
+      const text = new Text({
+        text:"Julya",
+        style
+      });
+
+      text.anchor.set(0.5);
+      text.x = isMobile? 100 : 180;
+      text.y = isMobile? 27 : 40;
+      app.stage.addChild(text);
+
+      let t = 0;
+
+      textContainer = new Container();
+      textContainer.addChild(text);
+      app.stage.addChild(textContainer);
+
+      tickerFn = () => {
+        t += 0.1;
+        const scale = 1 + Math.sin(t) * 0.05;
+        textContainer.scale.set(scale, 1 / scale);
       };
+      app.ticker.add(tickerFn);
 
-      loadAllFrames();
-      window.addEventListener("resize", updateLayout);
-    };
-
-    const updateLayout = () => {
-      if (!app || !sprite ) return;
-
-      const isMobile = window.innerWidth <= 740;
-      const width = isMobile ? 52 : 78;
-      const height = isMobile ? 52 : 78;
-
-      app.renderer.resize(width, height);
-      app.stage.scale.set(isMobile ? 0.8 : 1);
-
-      const scale =
-        sprite instanceof AnimatedSprite
-          ? isMobile
-            ? 0.12
-            : 0.13
-          : isMobile
-          ? 0.11
-          : 0.12;
-
-      sprite.scale.set(scale);
-      sprite.x = isMobile
-        ? (app.renderer.width - sprite.width) / 5
-        : (app.renderer.width - sprite.width) / 2;
-      sprite.y = isMobile
-        ? (app.renderer.height - sprite.height) / 5
-        : (app.renderer.height - sprite.height) / 2;
 
     };
-
     initApp();
-
-    return () => {
-      window.removeEventListener("resize", updateLayout);
-      app?.destroy(true, { children: true });
-    };
   }, []);
-
   return null;
 };

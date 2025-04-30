@@ -10,19 +10,19 @@ import { VantaBackground } from "./VantaBackground/VantaBackground";
 
 const slides = [
   {
-    image: "images/cat.jpg",
+    image: "icons/Cat.jpg",
     text: "Первый слайд",
     context:
       "Какой-то текст здесь написанный на слайде sdn asdjnkjdnkaj asjdbasjsdbasjbdasjdbasjdbasjdbasjdbasjdbasjdbasjdbasjdbasjdbasjdb",
   },
   {
-    image: "images/coy.jpg",
+    image: "icons/Black-cat.jpg",
     text: "Второй слайд",
     context:
       "Какой-то текст здесь написанный на слайде sdn asdjnkjdnkaj asjdbasjsdbasjbdasjdbasjdbasjdbasjdbasjdbasjdbasjdbasjdbasjdbasjdb",
   },
   {
-    image: "images/yangl.jpg",
+    image: "icons/Cat.jpg",
     text: "Третий слайд",
     context:
       "Какой-то текст здесь написанный на слайде sdn asdjnkjdnkaj asjdbasjsdbasjbdasjdbasjdbasjdbasjdbasjdbasjdbasjdbasjdbasjdbasjdb",
@@ -40,11 +40,11 @@ export const App = () => {
         <Header />
         <LogoAnimation />
         <section className="item-one">
-          <SliderWithBackground slides={slides} interval={2000} />
+          <SliderWithBackground slides={slides} interval={6000} />
         </section>
         <section className="item-two" id="section-sport">
           <CardWithFoto
-            url="images/yangl.jpg"
+            url="images/step-1.jpg"
             label={"Название проекта"}
             context="Привет, здесь написано про занятия фитнесом. Записать занятия можно, выбрав день недели и время."
           />

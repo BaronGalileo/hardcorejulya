@@ -10,17 +10,36 @@
     display: flex;
     height: 80px;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    text-align: center;
+    gap: 20px;
     
-    p,h1,h2,h3 {
-        color: col.$font__color_3;
+
+    .sosial-btn-wrapper {
+      img {
+        width: 75px;
+        height: 75px;
+        transition: transform 0.4s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
     }
 }
 
 
 @media (max-width: 740px) {
     .footer-wrapper {
-        height: 54px; 
+        height: 54px;
+        
+        .sosial-btn-wrapper {
+          img {
+            width: 48px;
+            height: 48px;
+          }
+        }
     }
+    
 }

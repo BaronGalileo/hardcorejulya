@@ -53,7 +53,7 @@ export const CanvasLineAndCow = () => {
     const style = new TextStyle({
       fontFamily: "Manege",
       fontSize: isMobile ? 20 : 44,
-      fill: "white",
+      fill: "#FFE373",
     });
   
     const words = message.split(" ");
