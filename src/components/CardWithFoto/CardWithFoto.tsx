@@ -13,7 +13,7 @@ export const CardWithFoto = ({url, label, context, imagePosition = "left", durat
 
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 0.4,
+        threshold: 0.25,
     });
 
 

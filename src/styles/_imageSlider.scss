@@ -1,3 +1,5 @@
+@use "color" as col;
+
 .image-slider-wrapper {
   width: 100%;
   height: 100%;
@@ -11,13 +13,7 @@
   left: 0;
   width: 120%;
   height: 100%;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
   transform: scale(1);
-  // filter: blur(15px);
   transition: all 0.8s ease;
   z-index: 0;
 }
@@ -32,17 +28,25 @@
 }
 
 .slide-label {
-  color: rgb(10, 10, 10);
-  font-size: 3rem;
+  color: col.$font__color_3;
+  font-size: 3.5rem;
   font-weight: bold;
   text-align: center;
+  text-shadow: 2px 2px 0 col.$background__color_2;
 }
 .slide-text {
-  color: rgb(10, 10, 10);
-  font-size: 2rem;
+  color: col.$font__color_3;
+  background-color: rgba(col.$background__color_3, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
   text-align: center;
-  max-width: 90%; /* ограничиваем ширину текста */
+  max-width: 80%;
   word-wrap: break-word;
+  padding: 8px;
+
 }
 
 .slider-btn {
@@ -75,4 +79,16 @@
 
 .slider-btn-right {
   right: 20px;
+}
+
+@media (max-width: 740px) {
+  .slide-text{
+    font-size: 1.3rem;
+    max-width: 72%;
+  }
+
+  .slide-label {
+    font-size: 2rem;
+  }
+  
 }

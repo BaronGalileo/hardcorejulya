@@ -36,7 +36,12 @@ export const SliderWithBackground: React.FC<SliderProps> = ({
       <motion.div
         key={slides[currentIndex].image}
         className="slide-background"
-        style={{ backgroundImage: `url(${slides[currentIndex].image})` }}
+        style={{ 
+        backgroundImage: `url(${slides[currentIndex].image})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "65% 10%"
+      }}
       />
       <div className="text-wrapper" key={slides[currentIndex].text}>
         <motion.h1

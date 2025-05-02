@@ -3,24 +3,21 @@ import {
   Application,
   Assets,
   Container,
+  Sprite,
   Spritesheet,
   Text,
-  TextStyle
+  TextStyle,
 } from "pixi.js";
 import { useEffect } from "react";
 
 export const LogoAnimation = () => {
-
   let app: Application;
-  let sprite: AnimatedSprite;
+  let sprite: Sprite | AnimatedSprite;
   let text: Text;
   let textContainer: Container;
   let tickerFn: () => void;
 
-
   useEffect(() => {
-
-
     const initApp = async () => {
       const isMobile = window.innerWidth <= 740;
 
@@ -29,15 +26,12 @@ export const LogoAnimation = () => {
         width: isMobile ? 150 : 280,
         height: isMobile ? 54 : 80,
         backgroundAlpha: 0,
-        resolution: window.devicePixelRatio || 1,
-        autoDensity: true,
       });
 
       app.canvas.style.position = "absolute";
       app.canvas.style.top = "2px";
       app.canvas.style.left = "5%";
       app.canvas.style.borderRadius = "12px";
-
 
       const container = document.querySelector(".logo-canvas");
       if (container) {
@@ -47,6 +41,12 @@ export const LogoAnimation = () => {
       }
 
       //Logotip
+
+      const firstTexture = await Assets.load("/icons/icon1.png");
+      sprite = new Sprite(firstTexture);
+      sprite.setSize(isMobile ? 52 : 78, isMobile ? 52 : 78);
+      app.stage.addChild(sprite);
+
       const jsonUrl = "/assets/spriteLogo.json";
       const jsonAtlas = await (await fetch(jsonUrl)).json();
 
@@ -59,10 +59,14 @@ export const LogoAnimation = () => {
       );
       animatedSpriteLogo.animationSpeed = 0.6;
       animatedSpriteLogo.play();
-      animatedSpriteLogo.setSize(isMobile? 52 : 78, isMobile? 52 : 78);
-      app.stage.addChild(animatedSpriteLogo);
+      animatedSpriteLogo.setSize(isMobile ? 52 : 78, isMobile ? 52 : 78);
 
-      //ТЕКСТ JULYA 
+      app.stage.removeChild(sprite);
+      sprite.destroy();
+      sprite = animatedSpriteLogo;
+      app.stage.addChild(sprite);
+
+      //ТЕКСТ JULYA
       const style = new TextStyle({
         fontFamily: "Brush Script MT, cursive",
         fontSize: isMobile ? 28 : 36,
@@ -76,13 +80,13 @@ export const LogoAnimation = () => {
       });
 
       const text = new Text({
-        text:"Julya",
-        style
+        text: "Julya",
+        style,
       });
 
       text.anchor.set(0.5);
-      text.x = isMobile? 100 : 180;
-      text.y = isMobile? 27 : 40;
+      text.x = isMobile ? 100 : 180;
+      text.y = isMobile ? 27 : 40;
       app.stage.addChild(text);
 
       let t = 0;
@@ -97,8 +101,6 @@ export const LogoAnimation = () => {
         textContainer.scale.set(scale, 1 / scale);
       };
       app.ticker.add(tickerFn);
-
-
     };
     initApp();
   }, []);
